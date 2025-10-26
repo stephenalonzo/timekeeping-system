@@ -53,43 +53,43 @@ class DatabaseSeeder extends Seeder
             }
         }
 
-        $punches = [
-            [
-                'punch_id' => 1,
-                'user_id' => 1
-            ],
-            [
-                'punch_id' => 2,
-                'user_id' => 1
-            ],
-            [
-                'punch_id' => 3,
-                'user_id' => 1
-            ],
-            [
-                'punch_id' => 4,
-                'user_id' => 1
-            ],
-            [
-                'punch_id' => 5,
-                'user_id' => 2
-            ],
-            [
-                'punch_id' => 6,
-                'user_id' => 1
-            ],
-            [
-                'punch_id' => 7,
-                'user_id' => 1
-            ],
-            [
-                'punch_id' => 8,
-                'user_id' => 2
-            ],
-        ];
+        // $punches = [
+        //     [
+        //         'punch_id' => 1,
+        //         'user_id' => 1
+        //     ],
+        //     [
+        //         'punch_id' => 2,
+        //         'user_id' => 1
+        //     ],
+        //     [
+        //         'punch_id' => 3,
+        //         'user_id' => 1
+        //     ],
+        //     [
+        //         'punch_id' => 4,
+        //         'user_id' => 1
+        //     ],
+        //     [
+        //         'punch_id' => 5,
+        //         'user_id' => 2
+        //     ],
+        //     [
+        //         'punch_id' => 6,
+        //         'user_id' => 1
+        //     ],
+        //     [
+        //         'punch_id' => 7,
+        //         'user_id' => 1
+        //     ],
+        //     [
+        //         'punch_id' => 8,
+        //         'user_id' => 2
+        //     ],
+        // ];
 
-        foreach ($punches as $punch) {
-            PunchUser::create($punch);
-        }
+        // foreach ($punches as $punch) {
+        //     PunchUser::create($punch);
+        // }
     }
 }
