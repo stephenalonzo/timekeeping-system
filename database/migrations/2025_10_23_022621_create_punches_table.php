@@ -11,17 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        // Schema::create('punches', function (Blueprint $table) {
-        //     $table->id();
-        //     $table->bigInteger('employeeId');
-        //     $table->bigInteger('refNo');
-        //     $table->timestamp('day_in')->nullable();
-        //     $table->timestamp('lunch_out')->nullable();
-        //     $table->timestamp('lunch_in')->nullable();
-        //     $table->timestamp('day_out')->nullable();
-        //     $table->bigInteger('time_worked')->nullable();
-        //     $table->timestamps();
-        // });
+        Schema::create('punches', function (Blueprint $table) {
+            $table->id();
+            $table->bigInteger('employeeId');
+            $table->bigInteger('refNo');
+            $table->timestamp('day_in')->nullable();
+            $table->timestamp('lunch_out')->nullable();
+            $table->timestamp('lunch_in')->nullable();
+            $table->timestamp('day_out')->nullable();
+            $table->bigInteger('time_worked')->nullable();
+            $table->timestamps();
+        });
     }
 
     /**
