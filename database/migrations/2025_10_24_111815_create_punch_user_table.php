@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('punch_user', function (Blueprint $table) {
-            $table->unsignedBigInteger('punch_id');
-            $table->unsignedBigInteger('user_id');
+        // Schema::create('punch_user', function (Blueprint $table) {
+        //     $table->unsignedBigInteger('punch_id');
+        //     $table->unsignedBigInteger('user_id');
 
-            $table->foreign('punch_id')->references('id')->on('punches')->onDelete('cascade');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-        });
+        //     $table->foreign('punch_id')->references('id')->on('punches')->onDelete('cascade');
+        //     $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+        // });
     }
 
     /**
