@@ -74,7 +74,7 @@ class PunchController extends Controller
         // Get the employee's past punches
         $archives = Punch::where('employeeId', $user->employeeId)
             ->whereNotBetween('day_in', [session('currentPeriodStart'), session('currentPeriodEnd')])
-            ->orderBy('day_in', 'desc')
+            ->orderBy('day_in')
             ->get()
             ->groupBy(fn($punch) => Carbon::parse($punch->day_in)->format('F Y'))
             ->map(function ($group, $month) {
@@ -92,7 +92,7 @@ class PunchController extends Controller
                     'archiveOT' => $archiveOT,
                     'uniqueId' => Str::slug($month)
                 ];
-            });
+            })->sortByDesc('punches');
 
         return view('timesheets.show', compact([
             'punches',
